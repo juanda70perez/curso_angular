@@ -1,0 +1,35 @@
+<input type="text" class="form-control " #newDia placeholder ="Ingrese el dia de la semana">
+
+<button class="btn btn-primary mt-2 mb-4" (click)="getDia(newDia.value)">
+    Mostrar dia
+</button>
+<div>
+   
+    @switch (dia) {
+        @case (1) {
+            <span>Lunes</span>
+        }
+        @case (2) {
+            <span>Martes</span>
+        }
+        @case (3) {
+            <span>Miercoles</span>
+        }
+        @case (4) {
+            <span>Jueves</span>
+        }
+        @case (5) {
+            <span>Viernes</span>
+        }
+        @case (6) {
+            <span>Sabado</span>
+        }
+        @case (7) {
+            <span>Domingo</span>
+        }
+        @default {
+            <span>Valor invalido</span>
+        }
+    }
+    
+</div>

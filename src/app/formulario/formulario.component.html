@@ -1,0 +1,18 @@
+<input #name type="text" placeholder="Ingresa tu nombre" class="form-control ">
+
+<button class="btn btn-primary mt-2" (click)="mostrar_en_consola(name.value)">
+    Mostrar en consola
+</button>
+
+@if (openAlert) {
+    <div  class="alert  alert-primary  mt-3" >
+       <p> Se ha enviado el mensaje</p>
+    </div>
+    <button class="btn btn-danger " (click)="openAlert = false">
+        X
+    </button>
+}@else {
+    <div class="alert  alert-danger ">
+        Mensaje de prueba
+    </div>
+}

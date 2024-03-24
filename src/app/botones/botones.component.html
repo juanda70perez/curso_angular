@@ -1,0 +1,22 @@
+<div>
+    <button [disabled]="button_disabled" class="btn btn-danger" (click)="text_color = 'text-danger' ">color rojo</button>
+    <button [disabled]="button_disabled" class="btn btn-primary  mx-2" (click)="text_color = 'text-primary '">color azul</button>
+    <button [disabled]="button_disabled" class="btn btn-success" (click)="text_color = 'text-success '">color amarillo</button>
+</div>
+
+<p [class] = "text_color" >Texto que va a cambiar de color</p>
+
+<button class="btn btn-secondary " (click)="button_disabled = !button_disabled">
+    Activar/Desactivar
+</button>
+
+<div>
+    <button class="btn btn bg-primary" (click)="img = 'https://images.pexels.com/photos/2295744/pexels-photo-2295744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'">
+        Imagen 1
+    </button>
+    <button class="btn btn bg-secondary" (click)="img = 'https://images.pexels.com/photos/395196/pexels-photo-395196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'">
+        Imagen 2
+    </button>
+</div>
+
+<img [src]="img" alt="">
